@@ -12,7 +12,6 @@ class ListsController < ApplicationController
   end
 
   def create
-    raise
     @list = List.new(list_params)
     @list.save
     redirect_to list_path(@list)
@@ -23,5 +22,4 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:name)
   end
-
 end
